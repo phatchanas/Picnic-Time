@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import RecipeApi from './component/recipeApi'
+import Recipes from './component/recipes'
+
 
 function App() {
+  const [recipes, setRecipes] = useState([])
+  const [weather, setWeather] = useState('warm')
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Recipes recipes={recipes}/>
+      <RecipeApi warm={weather} setRecipes={setRecipes}/>
     </div>
   );
 }
