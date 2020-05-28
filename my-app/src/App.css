@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+/* body {
+  background-color: #282c34;
+  color: white;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+} */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFDFF3;
+
+}
+
+.recipes {
+  background-color: blue;
+}

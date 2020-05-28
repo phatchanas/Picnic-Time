@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import RecipeApi from './component/recipeApi'
 import Recipes from './component/recipes'
+// import Recipedetails from './component/recipedetails'
 
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
     <div className="App">
       <Recipes recipes={recipes}/>
       <RecipeApi warm={weather} setRecipes={setRecipes}/>
+      {/* <Recipedetails/> */}
+
     </div>
   );
 }
