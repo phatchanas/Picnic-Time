@@ -1,42 +1,50 @@
 import React, { useState } from 'react';
 import './App.css';
-import RecipeApi from './component/recipeApi'
-import Recipes from './component/recipes'
-import Form from './component/form'
-import Weather from './component/weather'
+import RecipeApi from './components/recipeApi'
+import Recipes from './components/recipes'
+import Form from './components/form'
+import Weather from './components/weather'
+import Header from './components/header'
 
 
 function App() {
   const [recipes, setRecipes] = useState([])
-  const [weather, setWeather] = useState([])
+  const [weather, setWeather] = useState({})
 
   async function fetchData(e) {
     e.preventDefault()
     const city = e.target.elements.city.value
-    const apiData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e1dc2085d5a9112b2579772c4e3637ba`)
+    await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e1dc2085d5a9112b2579772c4e3637ba`)
     .then(res => res.json())
-    .then(data => data)
-    setWeather( {
-      city: apiData.name, 
-      temperatur: apiData.main.temp,
-      description: apiData.weather[0].description,
-      error: ''
-
-    }
-    )
-  }
+    .then(data => setWeather( {
+      city: data.name, 
+      temperatur: data.main.temp,
+      description: data.weather[0].description,
+      error: false
+    }))
+    .catch(error => {
+      console.warn(error)
+      setWeather( {
+        city: null, 
+        temperatur: null,
+        description: null,
+        error: 'Det blev fel'
+    })
+    
+  })
+}
  
   return (
     <div className="App">
-      <Recipes recipes={recipes}/>
-      <RecipeApi warm={weather} setRecipes={setRecipes}/>
+      <Header/>
+      <RecipeApi temperatur={weather.temperatur} setRecipes={setRecipes}/>
       <Form getWeather={fetchData} />
       <Weather 
       city={weather.city}
       temperatur={weather.temperatur}
       description={weather.description}
       error={weather.error}  />
-      {console.log(weather)}
+      {!weather.error && <Recipes recipes={recipes}/>}
     </div>
   );
 }

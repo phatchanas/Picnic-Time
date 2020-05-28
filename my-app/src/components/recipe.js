@@ -1,6 +1,5 @@
 import React from 'react'
  export default (props) => {
-     console.log(props.recipe.recipe)
      return(
         <div>
             <h5>
@@ -8,7 +7,7 @@ import React from 'react'
             </h5>
             <img src={props.recipe.recipe.image}/>
             <ul>
-                {props.recipe.recipe.ingredients.map(item => <li>{item.text}</li>)}
+                {props.recipe.recipe.ingredients.map((item, i) => <li key={i}>{item.text}</li>)}
             </ul>
          </div>
      )
