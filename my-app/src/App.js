@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-<<<<<<< HEAD
-import RecipeApi from './component/recipeApi'
-import Recipes from './component/recipes'
-// import Recipedetails from './component/recipedetails'
-=======
 import RecipeApi from './components/recipeApi'
 import Recipes from './components/recipes'
 import Form from './components/form'
 import Weather from './components/weather'
 import Header from './components/header'
->>>>>>> 57b062e3094b9f9dee34d3456b4c5ba1145a2476
 
 
 function App() {
@@ -34,7 +28,7 @@ function App() {
         city: null, 
         temperatur: null,
         description: null,
-        error: 'Det blev fel'
+        error: 'Ops this city doesnt seems to exist'
     })
     
   })
@@ -42,12 +36,6 @@ function App() {
  
   return (
     <div className="App">
-<<<<<<< HEAD
-      <Recipes recipes={recipes}/>
-      <RecipeApi warm={weather} setRecipes={setRecipes}/>
-      {/* <Recipedetails/> */}
-
-=======
       <Header/>
       <RecipeApi temperatur={weather.temperatur} setRecipes={setRecipes}/>
       <Form getWeather={fetchData} />
@@ -57,7 +45,6 @@ function App() {
       description={weather.description}
       error={weather.error}  />
       {!weather.error && <Recipes recipes={recipes}/>}
->>>>>>> 57b062e3094b9f9dee34d3456b4c5ba1145a2476
     </div>
   );
 }

@@ -28,7 +28,11 @@ export default ({city, temperatur, description, error}) => {
             {food}
             {error && <P>{error}</P>}
         </div>
+        
+
     )
+
+
 }
 
 
