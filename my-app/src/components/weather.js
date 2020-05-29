@@ -10,14 +10,25 @@ export default ({city, temperatur, description, error}) => {
          font-family: 'Chelsea Market', cursive;
     `;
     
-
+    let food;
+    if(temperatur){
+        if(temperatur > 15){
+            food = <P>It is Pic Nic weather! Hurray! Pack your sandwiches!</P>
+        } 
+        else{ 
+           food = <P>No, sadly it is not Pic Nic weather today, consider eating some soup at home</P>
+        }
+    }
 
     return (
         <div>
             {city && <P>{city}</P>}
             {temperatur && <P>{temperatur} °C</P>}
             {description && <P>{description}</P>}
+            {food}
             {error && <P>{error}</P>}
         </div>
     )
 }
+
+
