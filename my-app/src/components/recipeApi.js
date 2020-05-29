@@ -14,13 +14,13 @@ export default (props) => {
     const APP_ID = "accbd4b6";
     const APP_KEY = "00dbaccae33f10a6d1b06ceacd9e3c15";
     const [isLoading, setIsLoading] = useState(false)
-    
+
     let weather;
-    if(props.temperatur){
-        if(props.temperatur > 15){
+    if (props.temperature) {
+        if (props.temperature > 15) {
             weather = 'sandwich'
-        } 
-        else{ 
+        }
+        else {
             weather = 'soup'
         }
     }
@@ -28,22 +28,24 @@ export default (props) => {
     const url = `https://api.edamam.com/search?q=${weather}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
     const getData = async () => {
-        if(props.temperatur){
+        if (props.temperature) {
             setIsLoading(true)
             await Axios.get(url)
-            .then( result => {setIsLoading(false)
-            props.setRecipes(result.data.hits)})
-            .catch(error => {
-                setIsLoading(false)
-            })
+                .then(result => {
+                    setIsLoading(false)
+                    props.setRecipes(result.data.hits)
+                })
+                .catch(error => {
+                    setIsLoading(false)
+                })
         }
     }
 
     useEffect(() => {
         getData()
-    }, [props.temperatur])
+    }, [props.temperature])
 
-    return(
+    return (
         <>
             {isLoading && <H1>The recipes are loading</H1>}
         </>
