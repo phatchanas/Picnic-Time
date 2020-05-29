@@ -36,6 +36,7 @@
     transform: rotate(360deg);
   }
 }
+<<<<<<< HEAD
 
 /* body {
   background-color: #282c34;
@@ -55,4 +56,9 @@
 
 .recipes {
   background-color: blue;
+=======
+body{
+  background-color: white;
+;
+>>>>>>> 57b062e3094b9f9dee34d3456b4c5ba1145a2476
 }
