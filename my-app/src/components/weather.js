@@ -9,8 +9,6 @@ export default ({city, temperatur, description, error}) => {
          font-size: 2em;
          font-family: 'Chelsea Market', cursive;
     `;
-    
-
 
     return (
         <div>
@@ -19,5 +17,11 @@ export default ({city, temperatur, description, error}) => {
             {description && <P>{description}</P>}
             {error && <P>{error}</P>}
         </div>
+        
+
     )
+
+
 }
+
+

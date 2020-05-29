@@ -28,7 +28,7 @@ function App() {
         city: null, 
         temperatur: null,
         description: null,
-        error: 'Det blev fel'
+        error: 'Ops this city doesnt seems to exist'
     })
     
   })
