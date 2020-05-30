@@ -54,6 +54,7 @@ export default (props) => {
     if (city) {
       props.setQuery(city);
     }
+    localStorage.setItem('city', city);
   }
 
   return (
