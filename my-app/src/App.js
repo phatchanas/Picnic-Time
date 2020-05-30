@@ -10,8 +10,17 @@ import WeatherApi from './components/weatherApi'
 function App() {
   const [recipes, setRecipes] = useState([])
   const [temperature, setTemperature] = useState('')
-  const [query, setQuery] = useState('');
+  
+  let startVariable = '';
 
+  if (localStorage.getItem('city') === null){
+     startVariable = '';
+  } else {
+     startVariable = localStorage.getItem('city');
+  }
+
+  const [query, setQuery] = useState(startVariable);
+ 
   return (
     <div className="App">
       <Header />
