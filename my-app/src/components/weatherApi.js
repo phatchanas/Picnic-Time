@@ -19,21 +19,28 @@ export default (props) => {
             city: result.data.name,
             temperatur: result.data.main.temp,
             description: result.data.weather[0].description,
-          })
+          });
         })
         .catch(error => {
-          console.log('Felmeddelande');
-        })
-    };
+          setWeather({
+            city: null, 
+            temperatur: null,
+            description: null,
+            error: 'Det blev fel'
+          });
+    });
+  };
 
     if (props.query.length > 0) {
       getData();
     }
+
   }, [props.query]);
 
 
 
-  return (<>
+  return (
+  <>
     {weather &&
       <Weather
         city={weather.city}
