@@ -6,7 +6,7 @@ import Img from './sun.png';
 
 
 const H1 = styled.h1`
-    color:   #585c6e;
+    color:  #585c6e;
     margin:7px;
     padding:18px;
     font-family: 'Chelsea Market', cursive;
@@ -14,7 +14,7 @@ const H1 = styled.h1`
 `;
 const ImgSun = styled.img`
 animation: spin infinite 20s linear;
-margin:5px;
+margin:25px;
 
 @keyframes spin {
 from {
