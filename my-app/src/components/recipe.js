@@ -20,7 +20,7 @@ const Div = styled.div`
             <h5>
                 {props.recipe.recipe.label}
             </h5>
-            <img src={props.recipe.recipe.image}/>
+            <img src={props.recipe.recipe.image} alt="food"/>
             <ul>
                 {props.recipe.recipe.ingredients.map((item, i) => <li key={i}>{item.text}</li>)}
             </ul>

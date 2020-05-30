@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios'
 import styled from 'styled-components';
 
-export default (props) => {
-    const H1 = styled.h1`  
-        font-size: 2em;
-        font-family: 'Chelsea Market', cursive;
+const H1 = styled.h1`  
+    font-size: 2em;
+    font-family: 'Chelsea Market', cursive;
 
-    `;
+`;
+export default (props) => {
 
 
     

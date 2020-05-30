@@ -3,7 +3,6 @@ import './App.css';
 import RecipeApi from './components/recipeApi'
 import Recipes from './components/recipes'
 import Form from './components/form'
-import Weather from './components/weather'
 import Header from './components/header'
 import WeatherApi from './components/weatherApi'
 

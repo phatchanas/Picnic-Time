@@ -5,27 +5,27 @@ import Img from './sun.png';
 
 
 
-export default()=>{
-    const H1 = styled.h1`
-        color:   #585c6e;
-        border-bottom: 4px solid black;
-        margin:5px;
-        padding:15px;
-        font-family: 'Chelsea Market', cursive;
-        font-size: 5em;
-    `;
-    const ImgSun = styled.img`
-    animation: spin infinite 20s linear;
+const H1 = styled.h1`
+    color:   #585c6e;
+    margin:7px;
+    padding:18px;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 5em;
+`;
+const ImgSun = styled.img`
+animation: spin infinite 20s linear;
+margin:5px;
 
-    @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes spin {
+from {
+transform: rotate(0deg);
 }
-    `;    
+to {
+transform: rotate(360deg);
+}
+}
+`;    
+export default()=>{
 
 
     return(
