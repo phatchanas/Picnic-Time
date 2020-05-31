@@ -4,12 +4,12 @@ import Weather from './weather';
 
 export default (props) => {
   const [weather, setWeather] = useState(null)
-  console.log('query', props.query);
   const API_KEY = "e1dc2085d5a9112b2579772c4e3637ba";
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${props.query}&units=metric&appid=${API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city},${props.country}&units=metric&appid=${API_KEY}`;
 
   useEffect(() => {
     const getData = async () => {
+      console.log('city', props.city, 'coutrny',props.country);
       await Axios.get(url)
         .then(result => {
           props.setTemperature(
@@ -31,11 +31,11 @@ export default (props) => {
     });
   };
 
-    if (props.query.length > 0) {
+    if (props.city.length > 0) {
       getData();
     }
 
-  }, [props.query]);
+  }, [props.city]);
 
 
 
