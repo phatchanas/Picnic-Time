@@ -13,6 +13,9 @@ const Input = styled.input`
   padding: 10px ;
   background: transparent;
   transition: border-color 0.5s linear, width 0.5s ease-in;
+  @media only screen and (max-width: 600px) {
+    width: 60%;
+  }
 
   &:focus{
     border-bottom: 4px solid #37CACE;
@@ -20,6 +23,16 @@ const Input = styled.input`
 
   }
 `;
+const Form = styled.form`
+  @media only screen and (max-width: 600px) {
+       display:flex;
+       flex-direction:column;
+       justify-content:center;
+       align-items:center;
+  }
+
+`;
+
 
 
 const Button = styled.button`
@@ -32,6 +45,11 @@ const Button = styled.button`
   text-decoration: none;
   font-size: 16px;
   transition-duration: 1s;
+  @media only screen and (max-width: 600px) {
+    width:50%;
+
+  }
+  
 
 
 &:hover{
@@ -58,7 +76,7 @@ export default (props) => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <Form onSubmit={onSubmit}>
       <Input
         type='text'
         name='city'
@@ -68,6 +86,6 @@ export default (props) => {
       >
       </Input>
       <Button>Search</Button>
-    </form>
+    </Form>
   )
 }

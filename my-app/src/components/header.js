@@ -11,6 +11,10 @@ const H1 = styled.h1`
     padding:18px;
     font-family: 'Chelsea Market', cursive;
     font-size: 5em;
+    @media only screen and (max-width: 600px) {
+        font-size: 2em;
+ 
+   }
 `;
 const ImgSun = styled.img`
 animation: spin infinite 20s linear;
