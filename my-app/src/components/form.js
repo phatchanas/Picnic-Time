@@ -61,16 +61,23 @@ const Button = styled.button`
   `;
 export default (props) => {
   const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
 
-  const handleChange = (event) => {
+  const handleCityChange = (event) => {
     event.preventDefault();
     setCity(event.target.value);
+  }
+
+  const handleCountryChange = (event) => {
+    event.preventDefault();
+    setCountry(event.target.value);
   }
 
   const onSubmit = (event) => {
     event.preventDefault();
     if (city) {
-      props.setQuery(city);
+      props.setCity(city);
+      props.setCountry(country)
     }
     localStorage.setItem('city', city);
   }
@@ -82,7 +89,15 @@ export default (props) => {
         name='city'
         placeholder='City'
         value={city}
-        onChange={handleChange}
+        onChange={handleCityChange}
+      >
+      </Input>
+      <Input
+        type='text'
+        name='country'
+        placeholder='Country Code'
+        value={country}
+        onChange={handleCountryChange}
       >
       </Input>
       <Button>Search</Button>

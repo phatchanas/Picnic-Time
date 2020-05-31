@@ -17,7 +17,7 @@ export default ({city, temperatur, description, error}) => {
             food = <P>It is PicNic weather! Hurray! Pack your sandwiches!</P>
         } 
         else{ 
-           food = <P>No, sadly it is not PicNic weather today, consider eating some soup at home</P>
+           food = <P>No, sadly it is not PicNic weather right now, consider eating some soup at home</P>
         }
     }
 

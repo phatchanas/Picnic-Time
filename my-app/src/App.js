@@ -10,23 +10,24 @@ import WeatherApi from './components/weatherApi'
 function App() {
   const [recipes, setRecipes] = useState([])
   const [temperature, setTemperature] = useState('')
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
   
-  let startVariable = '';
+  // let startVariable = '';
 
-  if (localStorage.getItem('city') === null){
-     startVariable = '';
-  } else {
-     startVariable = localStorage.getItem('city');
-  }
+  // if (localStorage.getItem('city') === null){
+  //    startVariable = '';
+  // } else {
+  //    startVariable = localStorage.getItem('city');
+  // }
 
-  const [query, setQuery] = useState(startVariable);
  
   return (
     <div className="App">
       <Header />
       <RecipeApi temperature={temperature} setRecipes={setRecipes} />
-      <Form setQuery={setQuery} />
-      <WeatherApi query={query} setTemperature={setTemperature}/>
+      <Form setCity={setCity} setCountry={setCountry}/>
+      <WeatherApi city={city} country={country} setTemperature={setTemperature}/>
       {temperature && <Recipes recipes={recipes} />}
     </div>
   );
