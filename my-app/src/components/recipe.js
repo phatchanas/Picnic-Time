@@ -12,6 +12,13 @@ const Div = styled.div`
    border: 10px solid rgb(190, 201, 225); 
    margin:40px;
    padding:5px;
+   box-sizing:border-box;
+
+   @media only screen and (max-width: 600px) {
+       width:90%;
+       margin:0;
+       margin-bottom: 1.5em;
+   }
 `;
 const Imgfood = styled.img`
     width: 50%;

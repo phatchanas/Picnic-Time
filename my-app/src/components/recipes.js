@@ -8,8 +8,13 @@ const Div = styled.div`
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-  
-    
+    justify-content:space-around;
+    box-sizing:border-box;
+
+    @media only screen and (max-width: 600px) {
+       flex-direction: column;
+       align-items: center;
+   }
 `;
 
 export default (props) => {

@@ -8,6 +8,7 @@ export default ({city, temperatur, description, error}) => {
     const P = styled.p`
          font-size: 2em;
          font-family: 'Chelsea Market', cursive;
+         text-transform: capitalize;
     `;
     
     let food;
