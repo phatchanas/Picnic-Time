@@ -34,16 +34,13 @@ Vue ramverket verkade även vara bra när man skulle göra webbapplikationer.
 
 # Krav
 node
-
 npm 
-
-css modules
 
 # Installation 
 
 1. Gör en git clone med länken.
 2. Öpnna git bash eller en terminal och skriv in git clone och kopiera in länken.
-3. Skriv in npm install css modules.
+3. Skriv in npm install i terminalen.
 
 # Kör vår applikation 
 1. Stanna kvar i git bash elller i terminalen och navigera dig till rätt mapp src
