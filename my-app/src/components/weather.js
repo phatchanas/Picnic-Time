@@ -2,22 +2,21 @@ import React from 'react'
 import styled from 'styled-components';
 
 
-export default ({city, temperatur, description, error}) => {
-   
+export default ({ city, temperatur, description, error }) => {
 
     const P = styled.p`
          font-size: 2em;
          font-family: 'Chelsea Market', cursive;
          text-transform: capitalize;
     `;
-    
+
     let food;
-    if(temperatur){
-        if(temperatur > 15){
+    if (temperatur) {
+        if (temperatur > 15) {
             food = <P>It is PicNic weather! Hurray! Pack your sandwiches!</P>
-        } 
-        else{ 
-           food = <P>No, sadly it is not PicNic weather right now, consider eating some soup at home</P>
+        }
+        else {
+            food = <P>No, sadly it is not PicNic weather right now, consider eating some soup at home</P>
         }
     }
 
@@ -29,7 +28,7 @@ export default ({city, temperatur, description, error}) => {
             {food}
             {error && <P>{error}</P>}
         </div>
-        
+
 
     )
 
