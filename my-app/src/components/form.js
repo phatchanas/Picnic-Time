@@ -45,6 +45,7 @@ const Button = styled.button`
   text-decoration: none;
   font-size: 16px;
   transition-duration: 1s;
+  
   @media only screen and (max-width: 600px) {
     width:50%;
 

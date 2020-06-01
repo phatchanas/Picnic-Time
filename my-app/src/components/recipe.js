@@ -48,9 +48,19 @@ const Button = styled.button`
   text-decoration: none;
   font-size: 16px;
   transition-duration: 1s;
+
   @media only screen and (max-width: 600px) {
     width:50%;
 
+  }
+  
+
+
+&:hover{
+  background-color:#585c6e; 
+  color: white; 
+  font-size: 18px;
+}
   }
   `;
 
