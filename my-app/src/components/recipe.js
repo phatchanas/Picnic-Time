@@ -83,6 +83,7 @@ export default (props) => {
                 <Button onClick={handleButtonClick}>Visa recept</Button>
                 {isOpen ? <Ul>
                     {props.recipe.recipe.ingredients.map((item, i) => <li key={i}>{item.text}</li>)}
+                    <a href={props.recipe.recipe.url} target="_blank">Till receptets hemsida</a>
                 </Ul> : <p></p>}
             </div>
         </Div>
