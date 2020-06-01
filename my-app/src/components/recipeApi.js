@@ -5,12 +5,8 @@ import styled from 'styled-components';
 const H1 = styled.h1`  
     font-size: 2em;
     font-family: 'Chelsea Market', cursive;
-
 `;
-export default (props) => {
-
-
-    
+export default (props) => {  
     const APP_ID = "accbd4b6";
     const APP_KEY = "00dbaccae33f10a6d1b06ceacd9e3c15";
     const [isLoading, setIsLoading] = useState(false)

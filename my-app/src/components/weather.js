@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 
-
 export default ({ city, temperatur, description, error }) => {
 
     const P = styled.p`
@@ -28,11 +27,7 @@ export default ({ city, temperatur, description, error }) => {
             {food}
             {error && <P>{error}</P>}
         </div>
-
-
     )
-
-
 }
 
 

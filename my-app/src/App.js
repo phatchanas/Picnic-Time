@@ -6,7 +6,6 @@ import Form from './components/form'
 import Header from './components/header'
 import WeatherApi from './components/weatherApi'
 
-
 function App() {
   const [recipes, setRecipes] = useState([])
   const [temperature, setTemperature] = useState('')

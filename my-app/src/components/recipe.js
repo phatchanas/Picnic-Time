@@ -54,8 +54,6 @@ const Button = styled.button`
 
   }
   
-
-
 &:hover{
   background-color: #37CACE; 
   color: white; 
@@ -63,8 +61,6 @@ const Button = styled.button`
 }
   }
   `;
-
-
 
 export default (props) => {
     const [isOpen, toggleIsOpen] = React.useState(false);

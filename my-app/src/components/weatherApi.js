@@ -37,8 +37,6 @@ export default (props) => {
 
   }, [props.city]);
 
-
-
   return (
   <>
     {weather &&
@@ -50,6 +48,5 @@ export default (props) => {
       />
     }
   </>)
-
 
 }

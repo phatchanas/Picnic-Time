@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Img from './sun.png';
 
 
-
-
 const H1 = styled.h1`
     color:  #585c6e;
     margin:7px;
@@ -31,16 +29,11 @@ transform: rotate(360deg);
 `;    
 export default()=>{
 
-
     return(
         <div> 
          <ImgSun src={Img} alt="Sun"/> 
         <H1> Is it Picnic weather?</H1>
         </div>
-    )
-
-    
-
-    
+    )   
 
 }

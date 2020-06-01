@@ -33,8 +33,6 @@ const Form = styled.form`
 
 `;
 
-
-
 const Button = styled.button`
   font-family: 'Chelsea Market', cursive; 
   background-color: white; 
@@ -51,8 +49,6 @@ const Button = styled.button`
 
   }
   
-
-
 &:hover{
   background-color:#585c6e; 
   color: white; 
