@@ -20,6 +20,53 @@ const Div = styled.div`
        margin-bottom: 1.5em;
    }
 `;
+
+const A = styled.a`
+text-decoration: none;
+color: #333;
+display: block; 
+margin: 0 auto;
+font-size: 15px;
+
+&:hover{
+  font-size: 16px;
+}
+
+&::after {
+    content: "";
+    height: 4px;
+    width: 80%;
+    max-width: 220px;
+    display:block;
+    background-color: #37CACE;
+    margin: 0 auto;
+    }
+    @media only screen and (min-width: 900px) {
+       width:100%;
+      
+   }
+    @media only screen and (min-width: 600px) {
+       width:90%;
+       margin:0;
+       margin-bottom: 1.5em;
+   }
+
+&:hover::after {
+    width: 95%;
+}
+`;
+
+const Li = styled.li`
+font-family: 'Chelsea Market', cursive; 
+  background-color: white; 
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  margin-top:20px;
+  list-style-type:none;
+`;
+
 const Imgfood = styled.img`
     width: 50%;
     height: 45%;   
@@ -30,7 +77,7 @@ const Imgfood = styled.img`
     box-shadow: 8px 10px rgb(229, 230, 230);
 `;
 const Ul = styled.ul`
-    margin:3em;
+    margin:1em;
     padding:10px;
 `;
 const H2 = styled.h2`
@@ -51,7 +98,6 @@ const Button = styled.button`
 
   @media only screen and (max-width: 600px) {
     width:50%;
-
   }
   
 &:hover{
@@ -81,9 +127,12 @@ export default (props) => {
             <Imgfood src={props.recipe.recipe.image} alt="food" />
             <div>
                 <Button onClick={handleButtonClick}>Visa recept</Button>
-                {isOpen ? <Ul>
+                {isOpen ? 
+                <Ul>
                     {props.recipe.recipe.ingredients.map((item, i) => <li key={i}>{item.text}</li>)}
-                    <a href={props.recipe.recipe.url} target="_blank">Till receptets hemsida</a>
+                    <Li>
+                        <A href={props.recipe.recipe.url} target="_blank">Till receptets hemsida</A>
+                    </Li>
                 </Ul> : <p></p>}
             </div>
         </Div>
