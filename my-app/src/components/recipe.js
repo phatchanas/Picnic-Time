@@ -40,7 +40,7 @@ font-family: 'Chelsea Market', cursive;
 const Button = styled.button`
   font-family: 'Chelsea Market', cursive; 
   background-color: white; 
-  border: 4px solid #585c6e;
+  border: 4px solid #37CACE;
   color: black;
   margin-top: 20px;
   padding: 10px 30px;
@@ -57,7 +57,7 @@ const Button = styled.button`
 
 
 &:hover{
-  background-color:#585c6e; 
+  background-color: #37CACE; 
   color: white; 
   font-size: 18px;
 }
