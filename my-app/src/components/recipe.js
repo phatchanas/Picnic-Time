@@ -126,12 +126,12 @@ export default (props) => {
             </H2>
             <Imgfood src={props.recipe.recipe.image} alt="food" />
             <div>
-                <Button onClick={handleButtonClick}>Visa recept</Button>
+                <Button onClick={handleButtonClick}>Show recipe</Button>
                 {isOpen ? 
                 <Ul>
                     {props.recipe.recipe.ingredients.map((item, i) => <li key={i}>{item.text}</li>)}
                     <Li>
-                        <A href={props.recipe.recipe.url} target="_blank">Till receptets hemsida</A>
+                        <A href={props.recipe.recipe.url} target="_blank">Got to recipe page</A>
                     </Li>
                 </Ul> : <p></p>}
             </div>
