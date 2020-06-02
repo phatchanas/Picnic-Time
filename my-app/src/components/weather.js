@@ -7,6 +7,8 @@ export default ({ city, temperatur, description, error }) => {
          font-size: 2em;
          font-family: 'Chelsea Market', cursive;
          text-transform: capitalize;
+         margin-right: 80px;
+         margin-left: 80px;
     `;
 
     let food;
