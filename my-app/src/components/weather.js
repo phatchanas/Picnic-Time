@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components';
 
 export default ({ city, country, temperatur, description, error }) => {
+    const Div = styled.div`
+    margin-top:8em;
+    `;
 
     const P = styled.p`
          font-size: 2em;
@@ -22,14 +25,14 @@ export default ({ city, country, temperatur, description, error }) => {
     }
 
     return (
-        <div>
+        <Div>
             {city && <P>{city}</P>}
             {country && <P>{country}</P>}
             {temperatur && <P>{temperatur} °C</P>}
             {description && <P>{description}</P>}
             {food}
             {error && <P>{error}</P>}
-        </div>
+        </Div>
     )
 }
 

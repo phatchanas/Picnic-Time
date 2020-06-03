@@ -8,7 +8,6 @@ const Div = styled.div`
     flex-wrap: wrap;
     justify-content:space-around;
     box-sizing:border-box;
-
     @media only screen and (max-width: 600px) {
        flex-direction: column;
        align-items: center;
@@ -16,6 +15,7 @@ const Div = styled.div`
 `;
 
 export default (props) => {
+
     
     return(
         <Div>
