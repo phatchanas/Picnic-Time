@@ -26,13 +26,11 @@ function App() {
 
   useEffect(() => {
     window.scrollTo({
-      top: 800,
+      top: 750,
       left: 0,
       behavior: 'smooth'
     });
   }, [temperature])
-
-  const [city, setCity] = useState(startVariable);
  
   return (
     <div className="App">
