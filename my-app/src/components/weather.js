@@ -2,11 +2,14 @@ import React from 'react'
 import styled from 'styled-components';
 
 export default ({ city, temperatur, description, error }) => {
-
+    const Div = styled.div`
+        margin-top:8em;
+    `;
+    
     const P = styled.p`
          font-size: 2em;
          font-family: 'Chelsea Market', cursive;
-         text-transform: capitalize;
+         text-transform: capitalize;   
     `;
 
     let food;
@@ -20,13 +23,13 @@ export default ({ city, temperatur, description, error }) => {
     }
 
     return (
-        <div>
+        <Div>
             {city && <P>{city}</P>}
             {temperatur && <P>{temperatur} °C</P>}
             {description && <P>{description}</P>}
             {food}
             {error && <P>{error}</P>}
-        </div>
+        </Div>
     )
 }
 
