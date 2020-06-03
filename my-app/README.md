@@ -36,8 +36,8 @@ npm
 
 # Installation 
 
-1. Gör en git clone med länken.
-2. Öpnna git bash eller en terminal och skriv in git clone och kopiera in länken och gå in i rätt mapp.
+1. Git Clone projektet (https://github.com/phatchanas/Picnic-Time.git)
+2. cd till projektmappen
 3. Skriv in npm install i terminalen.
 
 # Kör vår applikation 
