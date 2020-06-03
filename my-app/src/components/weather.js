@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-export default ({ city, temperatur, description, error }) => {
+export default ({ city, country, temperatur, description, error }) => {
 
     const P = styled.p`
          font-size: 2em;
@@ -22,6 +22,7 @@ export default ({ city, temperatur, description, error }) => {
     return (
         <div>
             {city && <P>{city}</P>}
+            {country && <P>{country}</P>}
             {temperatur && <P>{temperatur} °C</P>}
             {description && <P>{description}</P>}
             {food}

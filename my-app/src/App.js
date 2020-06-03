@@ -9,18 +9,21 @@ import WeatherApi from './components/weatherApi'
 function App() {
   const [recipes, setRecipes] = useState([])
   const [temperature, setTemperature] = useState('')
-  const [country, setCountry] = useState('');
   
-  let startVariable = '';
+  let startCityVariable = '';
+  let startCountryVariable = '';
   
   if (localStorage.getItem('city') === null){
-    startVariable = '';
+    startCityVariable = '';
+    startCountryVariable = '';
   } else {
-    startVariable = localStorage.getItem('city');
+    startCityVariable = localStorage.getItem('city');
+    startCountryVariable = localStorage.getItem('country');
   }
   
-  const [city, setCity] = useState(startVariable);
- 
+  const [country, setCountry] = useState(startCountryVariable);
+  const [city, setCity] = useState(startCityVariable);
+
   return (
     <div className="App">
       <Header />

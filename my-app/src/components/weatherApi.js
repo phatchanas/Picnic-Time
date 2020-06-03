@@ -9,14 +9,15 @@ export default (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      console.log('city', props.city, 'coutrny',props.country);
       await Axios.get(url)
         .then(result => {
+          console.log(result);
           props.setTemperature(
             result.data.main.temp,
           );
           setWeather({
             city: result.data.name,
+            country: result.data.sys.country,
             temperatur: result.data.main.temp,
             description: result.data.weather[0].description,
           });
@@ -24,6 +25,7 @@ export default (props) => {
         .catch(error => {
           setWeather({
             city: null, 
+            country: null,
             temperatur: null,
             description: null,
             error: 'Ops this city doesnt seems to exist'
@@ -35,13 +37,14 @@ export default (props) => {
       getData();
     }
 
-  }, [props.city]);
+  }, [props.city, props.country]);
 
   return (
   <>
     {weather &&
       <Weather
         city={weather.city}
+        country={weather.country}
         temperatur={weather.temperatur}
         description={weather.description}
         error={weather.error}
