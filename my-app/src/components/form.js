@@ -77,6 +77,7 @@ export default (props) => {
       props.setCountry(country)
     }
     localStorage.setItem('city', city);
+    localStorage.setItem('country', country);
   }
 
   return (
